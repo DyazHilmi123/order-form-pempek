@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pempek Lezatku - Dyaz Hilmi Ardiarsyach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #f7faff, #e6efff);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background: #0078ff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+            font-size: 2rem;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.bing.com/th?id=OIP.TNfKyeK-WD-ZKfBHhCj6xAHaE8&w=154&h=103&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2') no-repeat center center/cover;
+            z-index: 1; /* Ensure the image is behind the text */
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 2; /* Ensure text is above the banner */
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            z-index: 2; /* Ensure text is above the banner */
+        }
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #fff;
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .form-section {
+            background-color: #202020;
+            color: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-container .form-label {
+            color: #333;
+            font-weight: 500;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .form-container button {
+            background-color: #ffd700;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #ffcc33;
+        }
+        footer {
+            background: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pempek Lezatku</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Pesan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Pempek Lezatku</h1>
+        <p>Dibuat dengan cinta oleh Dyaz Hilmi Ardiarsyach, nikmati rasa otentik terbaik!</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container py-5">
+        <h2 class="text-center mb-4" style="color: #0078ff;">Koleksi Pempek Kami</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/premium-photo/cireng-mercon-filled-with-spicy-chicken-meat-typical-food-from-bandung_224000-552.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Kapal Selam">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Kapal Selam</h5>
+                        <p>Rp25,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/free-photo/deep-fried-fish-ball-dark-surface_1150-43602.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Lenjer">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Lenjer</h5>
+                        <p>Rp20,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/free-photo/deep-fried-fish-ball-dark-surface_1150-43602.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Adaan">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Adaan</h5>
+                        <p>Rp15,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/free-photo/rugby-fish-balls-with-lemon-chili-paste-tomato-chili_1150-25748.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Kulit">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Kulit</h5>
+                        <p>Rp15,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/premium-photo/plate-dumplings-with-red-sauce-side_707060-317.jpg?semt=ais_hybrid" class="card-img-top alt="Pempek Tahu">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Tahu</h5>
+                        <p>Rp18,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/premium-photo/fried-gyoza-dumplings-snack-with-soy-sauce_1339-84787.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Panggang">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Panggang</h5>
+                        <p>Rp20,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://img.freepik.com/free-photo/pork-rind-white-bowl-white-wooden-floor_1150-27959.jpg?semt=ais_hybrid" class="card-img-top" alt="Pempek Crispy">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Crispy</h5>
+                        <p>Rp22,000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src="https://th.bing.com/th/id/OIP.VnURGT0XglDr_irNPS99wgHaFi?w=241&h=181&c=7&r=0&o=5&dpr=1.4&pid=1.7" class="card-img-top" alt="Pempek Dos">
+                    <div class="card-body">
+                        <h5 class="card-title">Pempek Dos</h5>
+                        <p>Rp10,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="container py-5">
+        <h2 class="text-center mb-4" style="color: #ffd700;">Pesan Pempek Favorit Anda</h2>
+        <div class="form-section">
+            <div class="form-container mx-auto">
+                <form id="orderForm">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Nama Lengkap</label>
+                      <input type="text" class="form-control" id="name" name="Nama" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" name="Email" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="product" class="form-label">Pilih Pempek</label>
+                      <select class="form-select" id="product" name="Produk" required>
+                        <option value="" disabled selected>Pilih Pempek</option>
+                        <option value="Pempek Kapal Selam">Pempek Kapal Selam</option>
+                        <option value="Pempek Lenjer">Pempek Lenjer</option>
+                        <option value="Pempek Adaan">Pempek Adaan</option>
+                        <option value="Pempek Kulit">Pempek Kulit</option>
+                        <option value="Pempek Tahu">Pempek Tahu</option>
+                        <option value="Pempek Panggang">Pempek Panggang</option>
+                        <option value="Pempek Crispy">Pempek Crispy</option>
+                        <option value="Pempek Dos">Pempek Dos</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Catatan Tambahan</label>
+                      <textarea class="form-control" id="message" name="Catatan" rows="4" placeholder="Tambahkan catatan jika ada"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100 py-2">Pesan Sekarang</button>
+                  </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pempek Lezatku - Dyaz Hilmi Ardiarsyach. Semua hak dilindungi.</p>
+    </footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+    // URL Web App dari Google Apps Script
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzcOVOMCWncbYGY_QtUQRgqGy-4USN7zaK9la9Aysha3y3JJ0HfZjgiqn1jDgq-m9jmqQ/exec'; // Ganti dengan URL Web App Anda
+    const form = document.querySelector('#orderForm');
+    const submitButton = form.querySelector('button[type="submit"]');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Mencegah pengiriman form secara default
+  
+      // Ubah tombol menjadi status "loading"
+      submitButton.innerHTML = `
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        Submitting...
+      `;
+      submitButton.disabled = true;
+  
+      // Kirim data ke Google Apps Script
+      try {
+        const formData = new FormData(form); // Ambil data formulir
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: formData // Kirim data dalam format FormData
+        });
+  
+        // Tangani respons dari server
+        if (response.ok) {
+          const result = await response.json();
+          if (result.result === 'success') {
+            alert('Pesanan Anda telah berhasil dikirim!');
+            form.reset(); // Reset formulir setelah berhasil
+          } else {
+            alert(`Pengiriman gagal: ${result.error || 'Kesalahan tidak diketahui'}`);
+          }
+        } else {
+          alert(`Permintaan gagal: ${response.statusText}`);
+        }
+      } catch (error) {
+        alert(`Terjadi kesalahan: ${error.message}`);
+      } finally {
+        // Kembalikan tombol ke status semula
+        submitButton.innerHTML = 'Pesan Sekarang';
+        submitButton.disabled = false;
+      }
+    });
+  </script>  
+</body>
+</html>
